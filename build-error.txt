@@ -1,14 +1,15 @@
 === ERRORS ===
-27:> Task :app:checkDebugDuplicateClasses
-28-> Task :app:mergeDebugJniLibFolders
-29-> Task :app:processDebugResources
-30-> Task :app:mergeLibDexDebug
-31-> Task :app:validateSigningDebug
+28:> Task :app:checkDebugDuplicateClasses
+29-> Task :app:mergeDebugNativeLibs
+30-> Task :app:processDebugResources
+31-> Task :app:mergeLibDexDebug
+32-> Task :app:validateSigningDebug
 --
-42:e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:312:16 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type SpeechRecognizer?
-43-
-44:> Task :app:compileDebugKotlin FAILED
-45-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1793939898977.json
+41:> Task :app:compileDebugKotlin FAILED
+42:e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/Actions.kt:153:24 Type mismatch: inferred type is Int but Long was expected
+43:e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:563:351 Unresolved reference: say
+44:e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:563:351 Unsupported [literal prefixes and suffixes]
+45-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1794068814896.json
 46-
 47-FAILURE: Build failed with an exception.
 48-
@@ -19,7 +20,7 @@
 53-
 54-* Try:
 --
-60:BUILD FAILED in 21s
+60:BUILD FAILED in 23s
 61-30 actionable tasks: 30 executed
 
 === LAST 60 LINES ===
@@ -39,34 +40,34 @@ Daemon will be stopped at the end of the build
 > Task :app:parseDebugLocalResources
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
-> Task :app:processDebugManifestForPackage
 > Task :app:javaPreCompileDebug
 > Task :app:mergeDebugShaders
 > Task :app:compileDebugShaders NO-SOURCE
 > Task :app:generateDebugAssets UP-TO-DATE
 > Task :app:mergeDebugAssets
+> Task :app:processDebugManifestForPackage
 > Task :app:compressDebugAssets
 > Task :app:desugarDebugFileDependencies
 > Task :app:mergeDebugStartupProfile
-> Task :app:checkDebugDuplicateClasses
 > Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
 > Task :app:processDebugResources
 > Task :app:mergeLibDexDebug
 > Task :app:validateSigningDebug
 > Task :app:writeDebugAppMetadata
 > Task :app:writeDebugSigningConfigVersions
-> Task :app:mergeDebugNativeLibs
 
 > Task :app:stripDebugDebugSymbols
 Unable to strip the following libraries, packaging them as they are: libjnidispatch.so, libvosk.so.
 
 > Task :app:mergeExtDexDebug
 
-> Task :app:compileDebugKotlin
-e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:312:16 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type SpeechRecognizer?
-
 > Task :app:compileDebugKotlin FAILED
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1793939898977.json
+e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/Actions.kt:153:24 Type mismatch: inferred type is Int but Long was expected
+e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:563:351 Unresolved reference: say
+e: file:///home/runner/work/Jarvis-ai-/Jarvis-ai-/proj/jarvis/app/src/main/java/com/aura/jarvis/JarvisService.kt:563:351 Unsupported [literal prefixes and suffixes]
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_2-1794068814896.json
 
 FAILURE: Build failed with an exception.
 
@@ -81,5 +82,5 @@ Execution failed for task ':app:compileDebugKotlin'.
 > Run with --scan to get full insights.
 > Get more help at https://help.gradle.org.
 
-BUILD FAILED in 21s
+BUILD FAILED in 23s
 30 actionable tasks: 30 executed
